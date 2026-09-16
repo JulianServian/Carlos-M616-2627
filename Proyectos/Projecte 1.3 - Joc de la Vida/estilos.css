@@ -1,0 +1,16 @@
+.univers {
+    display: inline-block;
+}
+
+.fila {
+    display: flex;
+}
+
+.celula {
+    width: 50px;
+    height: 30px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
