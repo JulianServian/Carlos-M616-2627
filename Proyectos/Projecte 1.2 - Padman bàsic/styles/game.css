@@ -1,0 +1,38 @@
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 32px);
+  grid-template-rows: repeat(10, 32px);
+  gap: 3px;
+  background: #111827;
+  border: 3px solid #facc15;
+  border-radius: 12px;
+  padding: 8px;
+  margin: 30px auto;
+  width: max-content;
+  box-shadow: 0 0 20px #facc15;
+}
+
+.celda {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #374151;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.7em;
+  border-radius: 5px;
+  background: #1f2937;
+  transition: 0.2s;
+}
+
+.celda:hover {
+  background: #374151;
+  transform: scale(1.08);
+}
+
+.buit {
+  background: #111827;
+  border: 1px solid #1f2937;
+}
