@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Adivina el número</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <h1>Adivina el número!</h1>
+  
+  <form id="guess-form">
+    <input type="number" id="user-input" min="1" max="100" required>
+    <button type="submit">Adivinar</button>
+  </form>
+
+  <p id="message"></p>
+  <p id="attempts"></p>
+  <button id="restart">Reiniciar</button>
+
+  <script type="module" src="scripts/game.js"></script>
+  <script type="module" src="scripts/ui.js"></script>
+</body>
+</html>
