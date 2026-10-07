@@ -1,4 +1,3 @@
-//Dibujar 
 export function dibuixaUnivers(columnes, files) {
     const tablero = document.querySelector('#game-board');
     let html = '<div class="univers">';
@@ -34,4 +33,16 @@ export function aleatoriPercentatge(percentatge) {
     } else {
         return false;
     }
+}
+
+export function crearMatriz(filas, columnas) {
+    let matriz = [];
+    for (let i = 0; i < filas; i++) {
+        let fila = [];
+        for (let j = 0; j < columnas; j++) {
+            fila.push(aleatori()); 
+        }
+        matriz.push(fila);
+    }
+    return matriz;
 }
