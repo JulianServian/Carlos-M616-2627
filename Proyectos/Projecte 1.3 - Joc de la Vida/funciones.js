@@ -88,3 +88,21 @@ export function evolucionarCelula(matriu, x, y) {
         return false;
     }
 }
+
+// Funció crearMatriuEvolucionada
+export function crearMatriuEvolucionada(matriuActual) {
+    let files = matriuActual.length;
+    let columnes = matriuActual[0].length;
+    let novaMatriu = [];
+
+    for (let i = 0; i < files; i++) {
+        let novaFila = [];
+        for (let j = 0; j < columnes; j++) {
+            let nouEstat = evolucionarCelula(matriuActual, i, j);
+            novaFila.push(nouEstat);
+        }
+        novaMatriu.push(novaFila);
+    }
+
+    return novaMatriu;
+}
