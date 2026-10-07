@@ -70,3 +70,21 @@ export function comptarVeinsVius(matriu, x, y) {
 
     return comptador;
 }
+
+
+// Funció evolucionarCelula
+export function evolucionarCelula(matriu, x, y) {
+    const estatActual = matriu[x][y]; // true (viva) o false (morta)
+    const veinsVius = comptarVeinsVius(matriu, x, y);
+
+    if (estatActual) {
+        // Cèl·lula viva
+        if (veinsVius < 2) return false; // solitud
+        if (veinsVius === 2 || veinsVius === 3) return true; // sigue viva
+        return false; // poblacion excesiva
+    } else {
+        //celula muerta
+        if (veinsVius === 3) return true; // reproducció
+        return false;
+    }
+}
