@@ -1,20 +1,16 @@
-export function dibuixaUnivers(columnes, files) {
-    const tablero = document.querySelector('#game-board');
-    let html = '<div class="univers">';
-
-    for (let fila = 0; fila < files; fila++) {
-        html += '<div class="fila">';
-
-        for (let columna = 0; columna < columnes; columna++) {
-            const id = `${fila}-${columna}`;
-            html += `<div class="celula" data-id="${id}">${id}</div>`;
+//Dibujar 
+export function dibuixaUniversAmbEstat(matriu) {
+    let univers = '<div class="univers">';
+    for (let i = 0; i < matriu.length; i++) {
+        univers += '<div class="fila">';
+        for (let j = 0; j < matriu[i].length; j++) {
+            let estat = matriu[i][j] ? 'viva' : 'muerta';
+            univers += `<div class="celula ${estat}" data-id="${i}-${j}"></div>`;
         }
-
-        html += '</div>';
+        univers += '</div>';
     }
-
-    html += '</div>';
-    tablero.innerHTML = html;
+    univers += '</div>';
+    document.querySelector("#univers-container").innerHTML += univers;
 }
 
 // Funció aleatori()
