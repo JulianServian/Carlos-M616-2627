@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Juego de la vida</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     
+<div id="controls">
+    <button id="start">Iniciar</button>
+    <button id="pause">Pausar</button>
+    <button id="reset">Reiniciar</button>
+</div>
 
-<div id="game-board"></div> 
+<div id="univers-container"></div>
 
 
-<script src="funciones.js"></script>
-<script>
-    dibuixaUnivers(2, 3);
-</script>
-
+<script src="funciones.js" type="module"></script>
+<script src="index.js" type="module"></script>
 </body>
 </html>
