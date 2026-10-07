@@ -42,3 +42,31 @@ export function crearMatriz(filas, columnas) {
     }
     return matriz;
 }
+
+// Funció comptarVeinsVius(matriu, x, y)
+export function comptarVeinsVius(matriu, x, y) {
+    let comptador = 0;
+
+    // Direccions dels veins: (dx, dy)
+    let direccions = [
+        [-1, -1], [-1, 0], [-1, 1],
+        [0, -1],            [0, 1],
+        [1, -1], [1, 0], [1, 1]
+    ];
+
+    for (let i = 0; i < direccions.length; i++) {
+        let dx = direccions[i][0];
+        let dy = direccions[i][1];
+        let nx = x + dx;
+        let ny = y + dy;
+
+        // Comprovamos que la nueva posicion esta en mi matriz
+        if (nx >= 0 && nx < matriu.length && ny >= 0 && ny < matriu[0].length) {
+            if (matriu[nx][ny] === true) {
+                comptador++;
+            }
+        }
+    }
+
+    return comptador;
+}
