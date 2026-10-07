@@ -1,3 +1,4 @@
+//Dibujar 
 function dibuixaUnivers(columnes, files) {
     const tablero = document.querySelector('#game-board');
     let html = '<div class="univers">';
@@ -15,4 +16,13 @@ function dibuixaUnivers(columnes, files) {
 
     html += '</div>';
     tablero.innerHTML = html;
+}
+
+// Funció aleatori()
+export function aleatori() {
+    if (Math.random() < 0.5) {
+        return true;
+    } else {
+        return false;
+    }
 }
