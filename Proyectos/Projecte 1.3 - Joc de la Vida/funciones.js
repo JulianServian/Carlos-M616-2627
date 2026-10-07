@@ -106,3 +106,17 @@ export function crearMatriuEvolucionada(matriuActual) {
 
     return novaMatriu;
 }
+
+
+// Funció copiarMatriu
+export function copiarMatriu(matriuOrigen, matriuDesti) {
+    matriuDesti.length = 0; // buidar la matriu de destí
+
+    for (let i = 0; i < matriuOrigen.length; i++) {
+        let filaCopiada = [];
+        for (let j = 0; j < matriuOrigen[i].length; j++) {
+            filaCopiada.push(matriuOrigen[i][j]);
+        }
+        matriuDesti.push(filaCopiada);
+    }
+} 
