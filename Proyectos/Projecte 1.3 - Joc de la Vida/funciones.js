@@ -1,5 +1,5 @@
 //Dibujar 
-function dibuixaUnivers(columnes, files) {
+export function dibuixaUnivers(columnes, files) {
     const tablero = document.querySelector('#game-board');
     let html = '<div class="univers">';
 
@@ -21,6 +21,15 @@ function dibuixaUnivers(columnes, files) {
 // Funció aleatori()
 export function aleatori() {
     if (Math.random() < 0.5) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Funció aleatoriPercentatge(percentatge)
+export function aleatoriPercentatge(percentatge) {
+    if (Math.random() * 100 < percentatge) {
         return true;
     } else {
         return false;
