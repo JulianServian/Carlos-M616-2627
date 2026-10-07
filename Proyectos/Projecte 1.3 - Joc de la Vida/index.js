@@ -21,3 +21,26 @@ function actualitzarUnivers() {
   document.querySelector("#univers-container").innerHTML = '';
   dibuixaUniversAmbEstat(univers);
 }
+
+
+// Botón Iniciar
+document.querySelector("#start").addEventListener("click", () => {
+  if (!intervalId) {
+    intervalId = setInterval(actualitzarUnivers, 500);
+  }
+});
+
+// Botón Pausar
+document.querySelector("#pause").addEventListener("click", () => {
+  clearInterval(intervalId);
+  intervalId = null;
+});
+
+// Botón Reiniciar
+document.querySelector("#reset").addEventListener("click", () => {
+  clearInterval(intervalId);
+  intervalId = null;
+  univers = crearMatriz(files, columnes);
+  document.querySelector("#univers-container").innerHTML = '';
+  dibuixaUniversAmbEstat(univers);
+});
